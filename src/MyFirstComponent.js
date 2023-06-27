@@ -1,8 +1,10 @@
+import "./FirstComponentStyle.css";
+
 export default function MyFirstComponent() {
   const x = 10;
 
   const person = {
-    name: "Pingucoder",
+    name: "Pingu",
     email: "pingucoder@gmail.com",
   };
 
@@ -20,10 +22,16 @@ export default function MyFirstComponent() {
         >
           {person.name}{" "}
         </h1>
-        <h3 style={{ backgroundColor: "green" }}>{person.email}</h3>
-        <h2 style={elemStyle}>hi</h2>
+        <h3 className={"active blBg "}>{person.email}</h3>
+        <h2 className={" active"} style={elemStyle}>
+          hi
+        </h2>
         <button onClick={saySalam}>Click me</button>
       </div>
+
+      <h1 className={person.name == "Pingucoder" ? "blred" : "greenBg"}>
+        Check Name
+      </h1>
       <div></div>
     </div>
   );
