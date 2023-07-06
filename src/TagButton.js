@@ -1,10 +1,15 @@
 import "./TagButtonStyle.css"
 
-function TagButton() {
+function TagButton({title,content,children}) {
   return (
+    <>
       <button className="tagButton">
-           Click Me
-    </button>
+           {title} 
+           {children}
+          
+       </button>
+       
+        </>
   )
 }
 
